@@ -20,12 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Profanity check step
-        id: set-output
+        id: set_output
         uses: niharrs/mind-your-language-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Slack Notification
-        if: steps.set_output.outputs.RESULT == 'true'
+        if: steps.set_output.outputs.RESULT == '::set-output name=RESULT::User said something bad'
         uses: rtCamp/action-slack-notify@master
         env:
           SLACK_CHANNEL: blockchain

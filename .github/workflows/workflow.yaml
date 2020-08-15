@@ -20,11 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Profanity check step
+        id: set-output
         uses: tailaiw/mind-your-language-action@v1.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   slackNotification:
-    needs: [echo_issue_comment]
+    if: steps.set_output.outputs.RESULT == 'User said something bad'
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:

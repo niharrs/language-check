@@ -23,3 +23,16 @@ jobs:
         uses: tailaiw/mind-your-language-action@v1.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@master
+      env:
+        SLACK_CHANNEL: blockchain
+        SLACK_USERNAME: moralPolice
+        SLACK_COLOR: red
+        SLACK_MESSAGE: ':warning: Profanity found on repository'
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

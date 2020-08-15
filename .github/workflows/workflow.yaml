@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   slackNotification:
-    if: (jobs.echo_issue_comment.status == 'success')
+    needs: [echo_issue_comment]
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:

@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Slack Notification
-        if: steps.set_output.outputs.RESULT == '::set-output name=RESULT::User said something bad'
+        if: steps.set_output.outputs.RESULT == '::name=RESULT::User said something bad'
         uses: rtCamp/action-slack-notify@master
         env:
           SLACK_CHANNEL: blockchain

@@ -19,6 +19,8 @@ This workflow makes use of two already existing GitHub actions:
 2. [Slack Notify - GitHub Action](https://github.com/marketplace/actions/slack-notify): This action is highly customizable, you can send in parameters in the form of environment variables.
 
 The slack channel I am using: degen-gh-actions.slack.com. 
+
+⚠️ To test this flow by yourself, you need to have a #blockchain channel in your workspace. Or, you can edit the `yml` file and change `SLACK_CHANNEL` there.
 ---
 
 #### Feel free to reach out in case of any issue.

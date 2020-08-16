@@ -3,7 +3,7 @@
 Maintainer Must-Have
 
 ## Description of the workflow
-This action automatically filters issues and pull requests that contains objectionable language (profane words) and instantly reports the action URL on your chosen Slack channel. 
+Language Check action automatically filters issues and pull requests that contains objectionable language (profane words) and instantly reports the action URL on your chosen Slack channel. 
 
 **This workflow is a must-have for all the developers out there who contribute to open source projects and *may* get trashed for their hard work 
 🤦🏻‍♀️**
@@ -12,7 +12,7 @@ This action automatically filters issues and pull requests that contains objecti
 
 **Maintaining sanity in the open source community is essential AF. 😉**
 
-This workflow is trigerred each time there is an issue is opened, or there is a new comment on an exisitng issue, or there is a pull request.
+This workflow is triggered each time there is an issue is opened, or there is a new comment on an existing issue, or there is a pull request.
 
 This workflow makes use of two already existing GitHub actions:
 1. [Mind your language action](https://github.com/tailaiw/mind-your-language-action): I forked it and tweaked the `entrypoint.sh` to use conditional jobs and workflows offered by GitHub Actions API. 
